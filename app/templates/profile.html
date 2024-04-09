@@ -1,0 +1,17 @@
+<!-- profile.html -->
+
+<h1>{{ user_profile.user.username }}</h1>
+
+<h2>Followers:</h2>
+<ul>
+{% for follower in followers %}
+    <li>{{ follower.user.username }}</li>
+{% endfor %}
+</ul>
+
+<h2>Following:</h2>
+<ul>
+{% for followed_user in following %}
+    <li>{{ followed_user.user.username }}</li>
+{% endfor %}
+</ul>
